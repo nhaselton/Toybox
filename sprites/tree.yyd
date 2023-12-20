@@ -12,6 +12,8 @@
 +Pickups
 	|sheart
 	|ssilverkey
+	|sarrow
+	|sgoldkey
 |sprite14
 +Walls and floors
 	|swall1
@@ -22,3 +24,11 @@
 	|sgrass4
 	|stree
 	|sbush
+	|ssnow
+	|sdesert1
+	|sdesert2
+	|sice1
+	|sice2
++Interact
+	|sswitch_on
+	|sswitch_off
