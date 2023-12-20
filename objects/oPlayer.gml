@@ -4,7 +4,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//Animation =
+///Animation Globals
 //Start Indx | EndIndx | Speed
 
 //0 Idle
@@ -27,29 +27,65 @@ anims[2,1] = 9
 anims[2,2] = .1
 
 
-animIndex = 2
-image_index = anims[animIndex,0]
-#define Step_0
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=605
-invert=0
-arg0=Animation
-*/
+animIndex = 0
+scr_changeAnim(0)
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
 applies_to=self
 */
-image_speed = anims[animIndex,2]
+///Player Globals
+hsp = 0
+vsp = 0
+walkSpeed = 5
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+///Animate
 if image_index > anims[animIndex,1]
     image_index = anims[animIndex,0]
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+///Movement
 
+UP = (keyboard_check(vk_up) or keyboard_check(ord('W')))
+DOWN = (keyboard_check(vk_down) or keyboard_check(ord('S')))
+LEFT = (keyboard_check(vk_left) or keyboard_check(ord('A')))
+RIGHT = (keyboard_check(vk_right) or keyboard_check(ord('D')))
 
-if ( keyboard_check_pressed(vk_space)){
-    animIndex += 1
-    if animIndex > 2
-        animIndex = 0
-    image_index = anims[animIndex,0]
-    image_speed = anims[animIndex,2]
+hsp = 0
+vsp = 0
+if ( UP ){
+    vsp = -walkSpeed
 }
+if ( DOWN ){
+    vsp = walkSpeed
+}
+if ( LEFT ) {
+    hsp = -walkSpeed
+}
+if ( RIGHT ){
+    hsp = walkSpeed
+}
+
+//Flip to face correct Side
+if hsp != 0
+    image_xscale = sign(hsp)
+
+//Update Animation (State machine?)
+if ( hsp != 0 or vsp != 0){
+    if ( animIndex != 1)
+        scr_changeAnim(1)
+}
+else{
+    scr_changeAnim(0)
+}
+
+x += hsp
+y += vsp
