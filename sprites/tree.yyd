@@ -1,6 +1,24 @@
 |sToyBoxJam3
-|suuuhhhh
 |snpc
 |splayer
 |sfont
 |sprite4
++Tools
+	|spickaxe
+	|ssword
+	|shammer
++Enemies
+	|suuuhhhh
++Pickups
+	|sheart
+	|ssilverkey
+|sprite14
++Walls and floors
+	|swall1
+	|swall2
+	|sgrass1
+	|sgrass2
+	|sgrass3
+	|sgrass4
+	|stree
+	|sbush
