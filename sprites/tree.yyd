@@ -4,6 +4,7 @@
 |sfont
 |sprite4
 +Tools
+	|scrossbow
 	|spickaxe
 	|ssword
 	|shammer
@@ -14,6 +15,7 @@
 	|ssilverkey
 	|sarrow
 	|sgoldkey
+	|sring
 |sprite14
 +Walls and floors
 	|swall1
@@ -32,3 +34,5 @@
 +Interact
 	|sswitch_on
 	|sswitch_off
+	|schest
+	|scoin
