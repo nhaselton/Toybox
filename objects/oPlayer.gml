@@ -39,6 +39,11 @@ anims[2,2] = .1
 
 animIndex = 0
 scr_changeAnim(0)
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -106,6 +111,35 @@ repeat(abs(vsp)){
         with inst
             event_perform(ev_collision,oPlayer)
         }
+}
+
+//Swapping Rooms
+roomWidth = 800
+roomHeight = 608
+
+relx = x - view_xview[0]
+rely = y - view_yview[0]
+
+if ( relx > roomWidth )
+    view_xview[0] += roomWidth
+if ( relx < 0 )
+    view_xview[0] -= roomWidth
+
+if ( rely > roomHeight)
+    view_yview[0] += roomHeight
+if ( rely < 0 )
+    view_yview[0] -= roomHeight
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+///MISC
+
+///Create View
+if ( keyboard_check_pressed(ord('T')))
+{
+
 }
 #define Collision_owall1
 /*"/*'/**//* YYD ACTION

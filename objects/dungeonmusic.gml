@@ -4,4 +4,5 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-mus_dungeon()
+if ( 0 )
+    mus_dungeon()
