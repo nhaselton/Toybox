@@ -98,9 +98,11 @@ applies_to=self
 ///Actions
 
 if ( keyboard_check_pressed(vk_space)){
-    holding.pickupTimer = holding.pickupCooldown
-    holding.held = false;
-    holding = noone
+    if ( holding ){
+        holding.pickupTimer = holding.pickupCooldown
+        holding.held = false;
+        holding = noone
+    }
 }
 #define Collision_oHoldable
 /*"/*'/**//* YYD ACTION
