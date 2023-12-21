@@ -4,6 +4,16 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+///Player Globals
+hsp = 0
+vsp = 0
+walkSpeed = 5
+holding = noone
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
 ///Animation Globals
 //Start Indx | EndIndx | Speed
 
@@ -29,15 +39,6 @@ anims[2,2] = .1
 
 animIndex = 0
 scr_changeAnim(0)
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=603
-applies_to=self
-*/
-///Player Globals
-hsp = 0
-vsp = 0
-walkSpeed = 5
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -89,3 +90,27 @@ else{
 
 x += hsp
 y += vsp
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+///Actions
+
+if ( keyboard_check_pressed(vk_space)){
+    holding.pickupTimer = holding.pickupCooldown
+    holding.held = false;
+    holding = noone
+}
+#define Collision_oHoldable
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+if (other.pickupTimer <= 0) {
+    if (holding == noone) {
+        holding = instance_find(other.id,0)
+        holding.held = true
+    }
+}
