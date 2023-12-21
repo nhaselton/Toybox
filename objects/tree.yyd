@@ -8,3 +8,6 @@
 	|owall2
 |oPickaxe
 |oHoldable
+|oPushable
+|oSolid
+|oCrate

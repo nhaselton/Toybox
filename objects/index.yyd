@@ -8,3 +8,7 @@ owall1
 owall2
 oPickaxe
 oHoldable
+oPushable
+oSolid
+
+oCrate

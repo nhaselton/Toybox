@@ -87,9 +87,27 @@ if ( hsp != 0 or vsp != 0){
 else{
     scr_changeAnim(0)
 }
+repeat(abs(hsp)){
+    inst = instance_place(x + sign(hsp),y,oSolid);
+    if ( inst == noone)
+        x+=sign(hsp);
+    else{
+        with inst
+            event_perform(ev_collision,oPlayer)
+        }
+}
 
-x += hsp
-y += vsp
+repeat(abs(vsp)){
+    inst = instance_place(x ,y+ sign(vsp),oSolid);
+    if ( inst == noone)
+        y+=sign(vsp);
+    else
+        with inst
+            event_perform(ev_collision,oPlayer)
+}
+
+//x += hsp
+//y += vsp
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
