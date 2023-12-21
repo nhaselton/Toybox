@@ -6,6 +6,13 @@
 	|ograss4
 	|owall1
 	|owall2
+
 	|orock
 +musicplay
 	|dungeonmusic
+
+|oPickaxe
+|oHoldable
+|oPushable
+|oSolid
+|oCrate
