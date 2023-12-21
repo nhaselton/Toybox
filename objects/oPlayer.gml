@@ -117,8 +117,18 @@ repeat(abs(vsp)){
 roomWidth = 800
 roomHeight = 608
 
-relx = x mod(800)
-rely = y mod roomHeight
+relx = x - view_xview[0]
+rely = y - view_yview[0]
+
+if ( relx > roomWidth )
+    view_xview[0] += roomWidth
+if ( relx < 0 )
+    view_xview[0] -= roomWidth
+
+if ( rely > roomHeight)
+    view_yview[0] += roomHeight
+if ( rely < 0 )
+    view_yview[0] -= roomHeight
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
