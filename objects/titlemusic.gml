@@ -5,4 +5,4 @@ action_id=603
 applies_to=self
 */
 if ( 1 )
-    mus_dungeon()
+    mus_puzzle()
