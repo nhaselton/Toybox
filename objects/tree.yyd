@@ -9,8 +9,17 @@
 	|orock
 +musicplay
 	|dungeonmusic
+	|titlemusic
 |oPickaxe
 |oHoldable
 |oPushable
 |oSolid
 |oCrate
+|odebug
+|oholeindi
+|ohole
+|holepar
+|oinit
+|otitle
+|oGameDat
+|odeathspawn
