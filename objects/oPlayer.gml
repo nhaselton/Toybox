@@ -9,6 +9,8 @@ hsp = 0
 vsp = 0
 walkSpeed = 5
 holding = noone
+spawnX = x
+spawnY = y
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -129,6 +131,12 @@ if ( rely > roomHeight)
     view_yview[0] += roomHeight
 if ( rely < 0 )
     view_yview[0] -= roomHeight
+
+//dont care is scuffed
+if ( relx > roomWidth or relx < 0 or rely > roomHeight or rely < 0){
+    spawnX = x
+    spawnY = y
+}
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -200,17 +208,8 @@ if (other.pickupTimer <= 0) {
 #define Collision_holepar
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=203
+action_id=603
 applies_to=self
-invert=0
 */
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=201
-relative=1
-applies_to=odeathspawn
-invert=0
-arg0=oPlayer
-arg1=0
-arg2=0
-*/
+x = spawnX
+y = spawnY
