@@ -149,26 +149,6 @@ if ( keyboard_check_pressed(ord('T')))
 {
 
 }
-#define Collision_owall1
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=101
-relative=0
-applies_to=self
-invert=0
-arg0=000010000
-arg1=0
-*/
-#define Collision_owall2
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=101
-relative=0
-applies_to=self
-invert=0
-arg0=000010000
-arg1=0
-*/
 #define Collision_orock
 /*"/*'/**//* YYD ACTION
 lib_id=1

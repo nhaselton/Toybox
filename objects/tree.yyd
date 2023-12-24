@@ -10,15 +10,19 @@
 +musicplay
 	|dungeonmusic
 	|titlemusic
-|oPickaxe
++Parent objects
+	|holepar
+	|oSolid
++pickups
+	|oPickaxe
++interact
+	|oCrate
++hazards
+	|oholeindi
+	|ohole
 |oHoldable
 |oPushable
-|oSolid
-|oCrate
 |odebug
-|oholeindi
-|ohole
-|holepar
 |oinit
 |otitle
 |oGameDat
