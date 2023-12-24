@@ -4,5 +4,5 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if ( 1 )
-    mus_dungeon()
+//font
+global.myFont = font_add_sprite(sfont, ord(' '), false, 0);
