@@ -35,6 +35,7 @@
 	|oinit
 	|odeathspawn
 	|odevblock
+	|ogamedat
 +debug only
 	|odebug
 	|odebugon
