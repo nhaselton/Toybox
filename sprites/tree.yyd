@@ -31,11 +31,16 @@
 	|sdesert2
 	|sice1
 	|sice2
+	|sundergroundtile
 +Interact
 	|sswitch_on
 	|sswitch_off
 	|schest
 	|scoin
+	|sstairsdown
+	|sstairsup
+	|spathblock
+	|spathunblock
 |sprite37
 |sdevblock
 |srock
@@ -44,5 +49,4 @@
 |sholeindi
 |shole
 |sprite46
-|spathblock
-|spathunblock
+|sundeground

@@ -1,6 +1,6 @@
 caption=
 width=3200
-height=1824
+height=608
 snap_x=32
 snap_y=32
 isometric=0
