@@ -1,8 +1,19 @@
 #define Create_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=603
-applies_to=self
+action_id=731
+invert=0
+arg0=1
+arg1=Adventure Guy - v0.0.
+arg2=0
+arg3=
+arg4=0
+arg5=
 */
-//Shows game's title and version number
-gamever()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=701
+relative=0
+invert=0
+arg0=2
+*/
