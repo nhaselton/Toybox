@@ -24,6 +24,8 @@
 +hazards
 	|oholeindi
 	|ohole
+	|oEmptyCreateHole
+	|oFullCrateHole
 |oHoldable
 |oPushable
 |odebug
