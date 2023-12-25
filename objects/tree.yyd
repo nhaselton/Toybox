@@ -7,19 +7,30 @@
 	|owall1
 	|owall2
 	|orock
+	|oundeground
 +musicplay
 	|dungeonmusic
 	|titlemusic
-|oPickaxe
++Parent objects
+	|holepar
+	|oSolid
++pickups
+	|oPickaxe
++interact
+	|oCrate
+	|ostairsdown
+	|ostairsup
+	|oundergroundtile
++hazards
+	|oholeindi
+	|ohole
 |oHoldable
 |oPushable
-|oSolid
-|oCrate
 |odebug
-|oholeindi
-|ohole
-|holepar
 |oinit
 |otitle
 |oGameDat
 |odeathspawn
+|opathblock
+|opathunblock
+|odevblock

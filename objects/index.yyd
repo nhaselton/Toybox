@@ -24,3 +24,13 @@ otitle
 titlemusic
 oGameDat
 odeathspawn
+
+opathblock
+opathunblock
+odevblock
+
+
+oundeground
+ostairsdown
+ostairsup
+oundergroundtile

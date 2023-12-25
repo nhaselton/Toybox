@@ -9,6 +9,8 @@ hsp = 0
 vsp = 0
 walkSpeed = 5
 holding = noone
+spawnX = x
+spawnY = y
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -93,25 +95,19 @@ else{
     scr_changeAnim(0)
 }
 
-repeat(abs(hsp)){
-    inst = instance_place(x + sign(hsp),y,oSolid);
-    if ( inst == noone)
-        x+=sign(hsp);
-    else{
-        with inst
-            event_perform(ev_collision,oPlayer)
-        }
-}
+objHor = instance_place(x+hsp,y,oSolid)
+objVer = instance_place(x,y+vsp,oSolid)
 
-repeat(abs(vsp)){
-    inst = instance_place(x ,y+ sign(vsp),oSolid);
-    if ( inst == noone)
-        y+=sign(vsp);
-    else{
-        with inst
-            event_perform(ev_collision,oPlayer)
-        }
+if ( objHor == noone){
+    x += hsp
 }
+if ( objVer == noone)
+    y += vsp
+
+with objHor
+    event_perform(ev_collision,oPlayer)
+with objVer
+    event_perform(ev_collision,oPlayer)
 
 //Swapping Rooms
 roomWidth = 800
@@ -129,6 +125,12 @@ if ( rely > roomHeight)
     view_yview[0] += roomHeight
 if ( rely < 0 )
     view_yview[0] -= roomHeight
+
+//dont care is scuffed
+if ( relx > roomWidth or relx < 0 or rely > roomHeight or rely < 0){
+    spawnX = x
+    spawnY = y
+}
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -141,26 +143,6 @@ if ( keyboard_check_pressed(ord('T')))
 {
 
 }
-#define Collision_owall1
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=101
-relative=0
-applies_to=self
-invert=0
-arg0=000010000
-arg1=0
-*/
-#define Collision_owall2
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=101
-relative=0
-applies_to=self
-invert=0
-arg0=000010000
-arg1=0
-*/
 #define Collision_orock
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -200,17 +182,8 @@ if (other.pickupTimer <= 0) {
 #define Collision_holepar
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=203
+action_id=603
 applies_to=self
-invert=0
 */
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=201
-relative=1
-applies_to=odeathspawn
-invert=0
-arg0=oPlayer
-arg1=0
-arg2=0
-*/
+x = spawnX
+y = spawnY

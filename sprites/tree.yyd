@@ -31,16 +31,22 @@
 	|sdesert2
 	|sice1
 	|sice2
+	|sundergroundtile
 +Interact
 	|sswitch_on
 	|sswitch_off
 	|schest
 	|scoin
+	|sstairsdown
+	|sstairsup
+	|spathblock
+	|spathunblock
 |sprite37
-|sToyBoxJam2
+|sdevblock
 |srock
 |sCrate
 |toyboxjam3b
 |sholeindi
 |shole
 |sprite46
+|sundeground
