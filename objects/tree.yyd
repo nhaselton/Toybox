@@ -8,6 +8,8 @@
 	|owall2
 	|orock
 	|oundeground
+	|opathblock
+	|opathunblock
 +musicplay
 	|dungeonmusic
 	|titlemusic
@@ -26,13 +28,14 @@
 	|ohole
 	|oEmptyCreateHole
 	|oFullCrateHole
-|oHoldable
-|oPushable
-|odebug
-|oinit
-|otitle
-|oGameDat
-|odeathspawn
-|opathblock
-|opathunblock
-|odevblock
++handlers
+	|otitle
+	|oHoldable
+	|oPushable
+	|oinit
+	|odeathspawn
+	|odevblock
++debug only
+	|odebug
+	|odebugon
+	|debug_player

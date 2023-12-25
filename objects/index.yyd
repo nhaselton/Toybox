@@ -22,7 +22,7 @@ holepar
 oinit
 otitle
 titlemusic
-oGameDat
+
 odeathspawn
 
 opathblock
@@ -36,3 +36,12 @@ ostairsup
 oundergroundtile
 oEmptyCreateHole
 oFullCrateHole
+
+
+
+
+
+
+debug_player
+
+odebugon

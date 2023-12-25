@@ -17,7 +17,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-sound_stop("11 puzzle")
+sound_stop_all()
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=224
