@@ -95,25 +95,19 @@ else{
     scr_changeAnim(0)
 }
 
-repeat(abs(hsp)){
-    inst = instance_place(x + sign(hsp),y,oSolid);
-    if ( inst == noone)
-        x+=sign(hsp);
-    else{
-        with inst
-            event_perform(ev_collision,oPlayer)
-        }
-}
+objHor = instance_place(x+hsp,y,oSolid)
+objVer = instance_place(x,y+vsp,oSolid)
 
-repeat(abs(vsp)){
-    inst = instance_place(x ,y+ sign(vsp),oSolid);
-    if ( inst == noone)
-        y+=sign(vsp);
-    else{
-        with inst
-            event_perform(ev_collision,oPlayer)
-        }
+if ( objHor == noone){
+    x += hsp
 }
+if ( objVer == noone)
+    y += vsp
+
+with objHor
+    event_perform(ev_collision,oPlayer)
+with objVer
+    event_perform(ev_collision,oPlayer)
 
 //Swapping Rooms
 roomWidth = 800
