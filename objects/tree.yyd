@@ -10,6 +10,7 @@
 	|oundeground
 	|opathblock
 	|opathunblock
+	|oFullCrateHole
 +musicplay
 	|dungeonmusic
 	|titlemusic
@@ -23,11 +24,11 @@
 	|ostairsdown
 	|ostairsup
 	|oundergroundtile
+	|osign1
+	|osign1a
 +hazards
 	|oholeindi
 	|ohole
-	|oEmptyCreateHole
-	|oFullCrateHole
 +handlers
 	|otitle
 	|oHoldable
@@ -35,7 +36,10 @@
 	|oinit
 	|odeathspawn
 	|odevblock
-	|ogamedat
+	|oEmptyCreateHole
+	|oEmptyCreateHolewithvar
+	|ogamever
+	|ocratespawn
 +debug only
 	|odebug
 	|odebugon
