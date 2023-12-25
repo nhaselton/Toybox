@@ -25,15 +25,15 @@ arg1=0
 */
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=203
-applies_to=oCrate
-invert=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
 action_id=202
 applies_to=self
 invert=0
 arg0=osign1a
 arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=oCrate
+invert=0
 */
