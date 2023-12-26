@@ -32,6 +32,7 @@
 	|sice1
 	|sice2
 	|sundergroundtile
+	|sundergroundtilemirror
 +Interact
 	|sswitch_on
 	|sswitch_off

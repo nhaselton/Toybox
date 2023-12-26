@@ -16,12 +16,6 @@ signTimer -= 4
 #define Collision_oPlayer
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=605
-invert=0
-arg0=we don't want to delete ALL crates.. just the ones in this room
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
 action_id=203
 applies_to=oCrate
 invert=0

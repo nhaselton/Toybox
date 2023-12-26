@@ -34,6 +34,7 @@
 +hazards
 	|oholeindi
 	|ohole
+	|oundergroundtilemirror
 +handlers
 	|otitle
 	|omirpawn
@@ -44,6 +45,7 @@
 	|oinit
 	|odeathspawn
 	|odevblock
+	|omirhole
 	|omirnoescape
 	|oEmptyCreateHole
 	|oEmptyCreateHolewithvar

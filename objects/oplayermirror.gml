@@ -206,6 +206,14 @@ invert=0
 arg0=oplayernoescapeoff
 arg1=0
 */
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oundergroundtilemirror
+invert=0
+arg0=omirhole
+arg1=0
+*/
 #define Collision_omirnoescape
 /*"/*'/**//* YYD ACTION
 lib_id=1

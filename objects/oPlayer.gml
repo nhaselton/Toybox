@@ -204,6 +204,85 @@ arg1=0
 */
 /*"/*'/**//* YYD ACTION
 lib_id=1
+action_id=203
+applies_to=oCrate
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=201
+relative=1
+applies_to=ocratespawn
+invert=0
+arg0=oCrate
+arg1=0
+arg2=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oFullCrateHole
+invert=0
+arg0=oEmptyCreateHole
+arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oplayernoescape
+invert=0
+arg0=oplayernoescapeoff
+arg1=0
+*/
+#define Collision_oundergroundtilemirror
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+x = spawnX
+y = spawnY
+sfx_die()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=oplayermirror
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=omirnospawn
+invert=0
+arg0=omirpawn
+arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=oCrate
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=201
+relative=1
+applies_to=ocratespawn
+invert=0
+arg0=oCrate
+arg1=0
+arg2=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oFullCrateHole
+invert=0
+arg0=oEmptyCreateHole
+arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
 action_id=202
 applies_to=oplayernoescape
 invert=0

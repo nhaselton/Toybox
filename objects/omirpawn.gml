@@ -25,3 +25,11 @@ invert=0
 arg0=oplayernoescape
 arg1=0
 */
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=omirhole
+invert=0
+arg0=oundergroundtilemirror
+arg1=0
+*/
