@@ -1,4 +1,5 @@
 |oPlayer
+|oplayermirror
 +Walls and floors
 	|ograss1
 	|ograss2
@@ -19,6 +20,8 @@
 	|oSolid
 +pickups
 	|oPickaxe
+	|obomb
+	|olensoftruth
 +interact
 	|oCrate
 	|ostairsdown
@@ -31,11 +34,15 @@
 	|ohole
 +handlers
 	|otitle
+	|omirpawn
+	|omirnospawn
+	|ormirspawnpoint
 	|oHoldable
 	|oPushable
 	|oinit
 	|odeathspawn
 	|odevblock
+	|omirnoescape
 	|oEmptyCreateHole
 	|oEmptyCreateHolewithvar
 	|ogamever
