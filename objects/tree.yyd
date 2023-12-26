@@ -45,6 +45,8 @@
 	|omirnoescape
 	|oEmptyCreateHole
 	|oEmptyCreateHolewithvar
+	|oplayernoescape
+	|oplayernoescapeoff
 	|ogamever
 	|ocratespawn
 +debug only

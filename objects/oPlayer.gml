@@ -187,3 +187,25 @@ applies_to=self
 */
 x = spawnX
 y = spawnY
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=oplayermirror
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=omirnospawn
+invert=0
+arg0=omirpawn
+arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oplayernoescape
+invert=0
+arg0=oplayernoescapeoff
+arg1=0
+*/

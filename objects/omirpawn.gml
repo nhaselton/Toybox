@@ -17,3 +17,11 @@ invert=0
 arg0=omirnospawn
 arg1=0
 */
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=oplayernoescapeoff
+invert=0
+arg0=oplayernoescape
+arg1=0
+*/
