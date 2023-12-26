@@ -139,9 +139,16 @@ applies_to=self
 ///MISC
 
 ///Create View
-if ( keyboard_check_pressed(ord('T')))
+if ( keyboard_check_pressed(vk_space))
 {
-
+    if ( holding != noone){
+        with holding
+        {
+            held = false;
+            pickupTimer = pickupCooldown
+        }
+        holding = noone
+    }
 }
 #define Collision_orock
 /*"/*'/**//* YYD ACTION
