@@ -2,6 +2,7 @@
 +music scripts
 	|mus_dungeon
 	|mus_puzzle
+	|mus_underground
 +sfx scripts
 	|sfx_push
 	|sfx_blockdrop
@@ -14,3 +15,4 @@
 	|sfx_stairs
 	|sfx_dialogue
 	|sfx_title
+	|sfx_pickup

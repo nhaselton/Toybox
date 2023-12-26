@@ -49,3 +49,10 @@ invert=0
 arg0=000010000
 arg1=0
 */
+#define Collision_holepar
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=self
+invert=0
+*/

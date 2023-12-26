@@ -17,6 +17,7 @@ applies_to=self
 if held {
     x = player.x
     y = player.y
+    // sfx_pickup() <----- idk how to add this without breaking shit
 }
 
 pickupTimer -= 1
