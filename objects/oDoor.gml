@@ -27,7 +27,7 @@ if (open){
 }else{
     sprite_index = stree
 }
-#define Other_2
+#define Other_4
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
