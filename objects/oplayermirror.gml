@@ -180,6 +180,12 @@ if (other.pickupTimer <= 0) {
 #define Collision_holepar
 /*"/*'/**//* YYD ACTION
 lib_id=1
+action_id=603
+applies_to=self
+*/
+sfx_die()
+/*"/*'/**//* YYD ACTION
+lib_id=1
 action_id=203
 applies_to=oplayermirror
 invert=0

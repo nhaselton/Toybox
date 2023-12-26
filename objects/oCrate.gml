@@ -22,9 +22,11 @@ applies_to=self
 if ( pushTimer <= 0){
     if ( other.hsp != 0 && other.vsp == 0) {
         x += sign(other.hsp) * 32
+        sfx_push()
     }
     else if ( other.hsp == 0 && other.vsp != 0){
         y += sign(other.vsp) * 32
+        sfx_push()
     }
     //Can not push diagonally, Figure out which directino is clsoer and use that
     else{
