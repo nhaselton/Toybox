@@ -16,8 +16,16 @@ action_id=603
 applies_to=self
 */
 open = true;
-for ( i = 0; i < numGoals;i++){
-
+for ( i = 0; i < numGoals; i+=1 ){
+    if ( goals[i].pressed = false){
+        open = false;
+        break;
+    }
+}
+if (open){
+    sprite_index = srock
+}else{
+    sprite_index = stree
 }
 #define Other_2
 /*"/*'/**//* YYD ACTION
