@@ -104,6 +104,7 @@ if ( objHor == noone){
 if ( objVer == noone)
     y += vsp
 
+    //Call their collisino events
 with objHor
     event_perform(ev_collision,oPlayer)
 with objVer
@@ -142,30 +143,6 @@ applies_to=self
 if ( keyboard_check_pressed(ord('T')))
 {
 
-}
-#define Collision_orock
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=101
-relative=0
-applies_to=self
-invert=0
-arg0=000010000
-arg1=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=603
-applies_to=self
-*/
-///Actions
-
-if ( keyboard_check_pressed(vk_space)){
-    if ( holding ){
-        holding.pickupTimer = holding.pickupCooldown
-        holding.held = false;
-        holding = noone
-    }
 }
 #define Collision_oHoldable
 /*"/*'/**//* YYD ACTION
