@@ -1,3 +1,4 @@
+|ogamever
 |oPlayer
 |oplayermirror
 +Walls and floors
@@ -47,7 +48,6 @@
 	|oEmptyCreateHolewithvar
 	|oplayernoescape
 	|oplayernoescapeoff
-	|ogamever
 	|ocratespawn
 +debug only
 	|odebug
