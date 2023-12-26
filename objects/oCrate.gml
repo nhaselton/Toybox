@@ -59,3 +59,31 @@ action_id=203
 applies_to=self
 invert=0
 */
+#define Collision_oEmptyCreateHole
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+closestIndex = -1
+closestDist = 10000
+
+for ( i = 0; i < instance_number(oEmptyCreateHole); i+=1){
+    o = instance_find(oEmptyCreateHole,i);
+    distToCrate =  sqrt( (x - o.x) * ( x - o.x) + ( y - o.y) * ( y - o.y))
+    if ( distToCrate < closestDist){
+        closestIndex = i
+        closestDist = distToCrate
+    }
+}
+
+if ( closestIndex != -1){
+
+
+clost = instance_find(oEmptyCreateHole,closestIndex)
+with clost{
+    instance_create(x,y,oFullCrateHole)
+   instance_destroy()
+}
+instance_destroy()
+}

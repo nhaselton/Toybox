@@ -4,6 +4,8 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+/*
+
 //Make filled thing
 instance_create(x,y,oFullCrateHole)
 //Destroy Crate
@@ -12,3 +14,5 @@ with(other)
 //Destroy Self
 instance_destroy()
 sfx_blockdrop()
+
+*/
