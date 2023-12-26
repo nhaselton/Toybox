@@ -1,4 +1,5 @@
 |r_title
 |r_GrassWorld
 |r_underground
-|r_testroom1
++debug only
+	|r_testroom1

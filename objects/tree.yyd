@@ -1,4 +1,6 @@
+|ogamever
 |oPlayer
+|oplayermirror
 +Walls and floors
 	|ograss1
 	|ograss2
@@ -8,6 +10,9 @@
 	|owall2
 	|orock
 	|oundeground
+	|opathblock
+	|opathunblock
+	|oFullCrateHole
 +musicplay
 	|dungeonmusic
 	|titlemusic
@@ -16,23 +21,35 @@
 	|oSolid
 +pickups
 	|oPickaxe
+	|obomb
+	|olensoftruth
 +interact
 	|oCrate
 	|ostairsdown
 	|ostairsup
 	|oundergroundtile
+	|osign1
+	|osign1a
 +hazards
 	|oholeindi
 	|ohole
++handlers
+	|otitle
+	|omirpawn
+	|omirnospawn
+	|ormirspawnpoint
+	|oHoldable
+	|oPushable
+	|oinit
+	|odeathspawn
+	|odevblock
+	|omirnoescape
 	|oEmptyCreateHole
-	|oFullCrateHole
-|oHoldable
-|oPushable
-|odebug
-|oinit
-|otitle
-|oGameDat
-|odeathspawn
-|opathblock
-|opathunblock
-|odevblock
+	|oEmptyCreateHolewithvar
+	|oplayernoescape
+	|oplayernoescapeoff
+	|ocratespawn
++debug only
+	|odebug
+	|odebugon
+	|debug_player

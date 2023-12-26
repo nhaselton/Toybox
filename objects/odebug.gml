@@ -1,16 +1,9 @@
-#define KeyPress_49
+#define KeyPress_46
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=224
+action_id=202
+applies_to=self
 invert=0
-arg0=r_GrassWorld
-arg1=0
-*/
-#define KeyPress_50
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=224
-invert=0
-arg0=r_testroom1
+arg0=odebugon
 arg1=0
 */
