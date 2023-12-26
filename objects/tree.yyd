@@ -15,6 +15,7 @@
 	|oFullCrateHole
 +musicplay
 	|dungeonmusic
+	|undergroundmusic
 	|titlemusic
 +Parent objects
 	|holepar
