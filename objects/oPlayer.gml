@@ -187,6 +187,7 @@ applies_to=self
 */
 x = spawnX
 y = spawnY
+sfx_die()
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=203
