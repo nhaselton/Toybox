@@ -6,6 +6,9 @@ applies_to=self
 */
 pushTimer = 0
 pushCooldown = room_speed / 4
+
+spawnX = x
+spawnY = y
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
