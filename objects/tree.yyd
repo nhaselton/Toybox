@@ -7,6 +7,7 @@
 	|ograss3
 	|ograss4
 	|owall1
+	|obombablewall
 	|owall2
 	|orock
 	|oharderrock
@@ -24,6 +25,7 @@
 +Parent objects
 	|holepar
 	|oSolid
+	|obombonly
 +pickups
 	|oPickaxe
 	|obomb
@@ -35,6 +37,8 @@
 	|oundergroundtile
 	|osign1
 	|osign1a
+	|onpc
+	|onpc_test
 +hazards
 	|oholeindi
 	|ohole
