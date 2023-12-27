@@ -9,6 +9,8 @@ _id = 0
 
 numGoals = 0 // will be set at gamestart
 goals[0] = noone //will abso be set
+
+invisWall = instance_create(x,y,oInvisWall)
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -23,9 +25,11 @@ for ( i = 0; i < numGoals; i+=1 ){
     }
 }
 if (open){
+    invisWall.x = 9999999999
     sprite_index = spathunblock
 }else{
     sprite_index = spathblock
+    invisWall.x = x
 }
 #define Other_4
 /*"/*'/**//* YYD ACTION
