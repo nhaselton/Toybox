@@ -12,10 +12,10 @@ it will ONLY appear in that room. Not that we need it anywhere else
 
 For future reference...
 */
-
-draw_set_font(global.myFont);
+draw_sprite(onpc,0,x,y)
+//draw_set_font(global.myFont);
 draw_set_color(c_white);
 // Just a warning. the font needs to be in all caps or it won't display
-draw_text(2734, 384, " TRUST NOT THE FOUL HOLES ");
-draw_text(2734, 404, " BUT NATURE SHALL NOT ");
-draw_text(2734, 424, " LEAD YOU ASTRAY ");
+draw_text(x, y, " LOREM IPUS ");
+draw_text(12+16, 30+16, " D\nO YOU KNOW WHAT THAT ");
+draw_text(12+16, 50+16, " MEANS? ");
