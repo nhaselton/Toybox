@@ -77,6 +77,20 @@ invert=0
 arg0=PressurePlates
 arg1=0
 */
+#define KeyPress_53
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+sound_stop_all()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=224
+invert=0
+arg0=r_texttest
+arg1=0
+*/
 #define KeyRelease_17
 /*"/*'/**//* YYD ACTION
 lib_id=1
