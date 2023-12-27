@@ -38,7 +38,6 @@
 	|osign1
 	|osign1a
 	|onpc
-	|onpc_test
 +hazards
 	|oholeindi
 	|ohole
@@ -64,3 +63,4 @@
 	|odebug
 	|odebugon
 	|debug_player
+	|onpc_test

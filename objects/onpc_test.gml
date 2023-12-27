@@ -16,6 +16,6 @@ For future reference...
 draw_set_font(global.myFont);
 draw_set_color(c_white);
 // Just a warning. the font needs to be in all caps or it won't display
-draw_text(0+16, 0+16, " LOREM IPUS ");
-draw_text(0+16, 20+16, " DO YOU KNOW WHAT THAT ");
-draw_text(0+16, 40+16, " MEANS? ");
+draw_text(12+16, 12+16, " LOREM IPUS ");
+draw_text(12+16, 30+16, " DO YOU KNOW WHAT THAT ");
+draw_text(12+16, 50+16, " MEANS? ");
