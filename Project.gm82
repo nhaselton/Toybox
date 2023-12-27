@@ -2,14 +2,14 @@ gm82_version=5
 gameid=228925277
 
 info_author=
-info_version=01
+info_version=011
 info_information=
 
 exe_company=Nhaselton and Pikakid98
 exe_product=
 exe_copyright=
 exe_description=Made for Tom Hall's Toybox Jam
-exe_version=0.1.0.0
+exe_version=0.1.1.0
 
 has_backgrounds=1
 has_datafiles=0
