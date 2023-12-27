@@ -1,21 +1,36 @@
-#define Collision_oPlayer
+#define Create_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
 applies_to=self
 */
-/*
-Need a way to draw the text on the screen relevant to the player's
-position.. otherwise the text will draw in a random spot. Currently
-I'm just drawing to the exact coordinates. If this is called again
-it will ONLY appear in that room. Not that we need it anywhere else
-
-For future reference...
+shouldDraw =0
+#define Step_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
 */
-draw_sprite(onpc,0,x,y)
-//draw_set_font(global.myFont);
+if ( distance_to_object(oPlayer) < 64){
+    shouldDraw = 2;//room_speed
+}
+
+
+shouldDraw -=1
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+draw_sprite(snpc,0,x,y)
+
+draw_set_font(global.myFont);
 draw_set_color(c_white);
+
+if ( shouldDraw > 0){
 // Just a warning. the font needs to be in all caps or it won't display
-draw_text(x, y, " LOREM IPUS ");
-draw_text(12+16, 30+16, " D\nO YOU KNOW WHAT THAT ");
-draw_text(12+16, 50+16, " MEANS? ");
+    draw_text(view_xview[0] + -3+16, view_yview[0] + 10+16, " DISTRUST THE EMPTY VOID ");
+    draw_text(view_xview[0] + 27+16, view_yview[0] + 35+16, " MAY NATURE GUIDE THY ");
+    draw_text(view_xview[0] + 267+16, view_yview[0] + 60+16, " PATH ");
+}
