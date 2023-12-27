@@ -23,9 +23,9 @@ for ( i = 0; i < numGoals; i+=1 ){
     }
 }
 if (open){
-    sprite_index = srock
+    sprite_index = spathunblock
 }else{
-    sprite_index = stree
+    sprite_index = spathblock
 }
 #define Other_4
 /*"/*'/**//* YYD ACTION

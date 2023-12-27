@@ -1,5 +1,3 @@
-|oDoor
-|oPlate
 |ogamever
 |oPlayer
 |oplayermirror
@@ -12,6 +10,8 @@
 	|owall2
 	|orock
 	|oundeground
+	|oDoor
+	|oPlate
 	|opathblock
 	|opathunblock
 	|oFullCrateHole
