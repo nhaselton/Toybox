@@ -79,6 +79,27 @@ if ( moveTimer <= 0){
         spawnY = y
     }
 }
+#define Collision_holepar
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+sfx_die()
+o = instance_create(x,y,osign1)
+with o{
+    event_perform(ev_collision,oPlayer)
+    instance_destroy()
+}
+instance_destroy()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=omirnospawn
+invert=0
+arg0=omirpawn
+arg1=0
+*/
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
 lib_id=1
