@@ -16,7 +16,7 @@ preX = x// for moving
 preY = y
 
 moveTimer = 0
-moveSpeed = room_speed  / 12 // How long to go from 1 square to the next
+moveSpeed = room_speed  / 10 // How long to go from 1 square to the next
 
 dx = x
 dy = y
@@ -124,7 +124,15 @@ if ( moveTimer < 0){
     else if ( LEFT ) hsp = -1
     else if ( UP ) vsp = -1
     else if ( DOWN) vsp =  1;
-    if ( LEFT or RIGHT or UP or DOWN) moveTimer = moveSpeed
+    if ( LEFT or RIGHT or UP or DOWN){
+        hit = instance_place(x + hsp, y + vsp, oSolid);
+        if ( hit == noone){
+            moveTimer = moveSpeed
+        }else{
+            with hit
+                event_perform(ev_collision,oPlayer)
+        }
+     }
 }
 
 
