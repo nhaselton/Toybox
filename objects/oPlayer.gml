@@ -209,7 +209,7 @@ applies_to=self
 moveTimer = 0
 x = spawnX
 y = spawnY
-//sfx_die()
+sfx_die()
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
 lib_id=1
