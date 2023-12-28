@@ -4,5 +4,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//font
-global.myFont = font_add_sprite(sfont, ord(' '), false, 0);
+initgame()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=222
+invert=0
+arg0=0
+*/
