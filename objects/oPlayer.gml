@@ -11,6 +11,12 @@ walkSpeed = 5
 holding = noone
 spawnX = x
 spawnY = y
+
+preX = x// for moving
+preY = y
+
+moveTimer = 0
+moveSpeed = room_speed  / 8 // How long to go from 1 square to the next
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -67,6 +73,7 @@ DOWN = (keyboard_check(vk_down) or keyboard_check(ord('S')))
 LEFT = (keyboard_check(vk_left) or keyboard_check(ord('A')))
 RIGHT = (keyboard_check(vk_right) or keyboard_check(ord('D')))
 
+/*
 hsp = 0
 vsp = 0
 if ( UP ){
@@ -108,6 +115,31 @@ with objHor
     event_perform(ev_collision,oPlayer)
 with objVer
     event_perform(ev_collision,oPlayer)
+*/
+if ( moveTimer < 0){
+    if ( RIGHT ) hsp = 1
+    else if ( LEFT ) hsp = -1
+    else if ( UP ) vsp = -1
+    else if ( DOWN) vsp =  1;
+    if ( LEFT or RIGHT or UP or DOWN) moveTimer = moveSpeed
+}
+
+if ( moveTimer > 0 ){
+    x = lerp(preX, preX + (hsp*32), 1 - (moveTimer / moveSpeed) )
+    y = lerp(preY, preY + (vsp*32), 1 - (moveTimer / moveSpeed) )
+
+}
+
+moveTimer -= 1
+
+if ( moveTimer < 0 ){
+    preX += hsp * 32
+    preY += vsp * 32
+    x = preX
+    y = preY
+    vsp = 0
+    hsp = 0
+}
 
 //Swapping Rooms
 roomWidth = 800
@@ -272,3 +304,11 @@ invert=0
 arg0=oplayernoescapeoff
 arg1=0
 */
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+draw_self()
+draw_text(view_xview[0],view_yview[0] + 32,string(x) + ", " + string(y))

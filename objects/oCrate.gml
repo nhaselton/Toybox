@@ -22,7 +22,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-if ( pushTimer <= 0){
+//if ( pushTimer <= 0){
     if ( other.hsp != 0 && other.vsp == 0) {
         x += sign(other.hsp) * 32
         sfx_push()
@@ -41,7 +41,7 @@ if ( pushTimer <= 0){
             y += sign(other.vsp) * 32
     }
     pushTimer = pushCooldown
-}
+//}
 #define Collision_oSolid
 /*"/*'/**//* YYD ACTION
 lib_id=1
