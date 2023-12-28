@@ -17,6 +17,9 @@ preY = y
 
 moveTimer = 0
 moveSpeed = room_speed  / 8 // How long to go from 1 square to the next
+
+dx = x
+dy = y
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -124,44 +127,45 @@ if ( moveTimer < 0){
     if ( LEFT or RIGHT or UP or DOWN) moveTimer = moveSpeed
 }
 
+
+
 if ( moveTimer > 0 ){
-    x = lerp(preX, preX + (hsp*32), 1 - (moveTimer / moveSpeed) )
-    y = lerp(preY, preY + (vsp*32), 1 - (moveTimer / moveSpeed) )
+    x += hsp * ((1/moveSpeed) * 32)
+    y += vsp * ((1/moveSpeed) * 32)
 
 }
+moveTimer -=1
 
-moveTimer -= 1
-
-if ( moveTimer < 0 ){
-    preX += hsp * 32
-    preY += vsp * 32
-    x = preX
-    y = preY
-    vsp = 0
+if (moveTimer <= 0){
     hsp = 0
+    vsp = 0
+        //Fix floating point error
+    x = round ( x / 32 ) * 32
+    y = round ( y / 32 ) * 32
 }
-
 //Swapping Rooms
 roomWidth = 800
 roomHeight = 608
 
-relx = x - view_xview[0]
-rely = y - view_yview[0]
+if ( moveTimer <= 0){
+    relx = x - view_xview[0]
+    rely = y - view_yview[0]
 
-if ( relx > roomWidth )
-    view_xview[0] += roomWidth
-if ( relx < 0 )
-    view_xview[0] -= roomWidth
+    if ( relx >= roomWidth )
+        view_xview[0] += roomWidth
+    if ( relx < 0 )
+        view_xview[0] -= roomWidth
 
-if ( rely > roomHeight)
-    view_yview[0] += roomHeight
-if ( rely < 0 )
-    view_yview[0] -= roomHeight
+    if ( rely >= roomHeight)
+        view_yview[0] += roomHeight
+    if ( rely < 0 )
+        view_yview[0] -= roomHeight
 
-//dont care is scuffed
-if ( relx > roomWidth or relx < 0 or rely > roomHeight or rely < 0){
-    spawnX = x
-    spawnY = y
+    //dont care is scuffed
+    if ( relx >= roomWidth or relx < 0 or rely > roomHeight or rely < 0){
+        spawnX = x
+        spawnY = y
+    }
 }
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -224,31 +228,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+moveTimer = 0
 x = spawnX
 y = spawnY
-sfx_die()
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=203
-applies_to=oplayermirror
-invert=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=202
-applies_to=omirnospawn
-invert=0
-arg0=omirpawn
-arg1=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=202
-applies_to=oplayernoescape
-invert=0
-arg0=oplayernoescapeoff
-arg1=0
-*/
+//sfx_die()
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -310,5 +293,13 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+draw_text(view_xview[0] + 16,view_yview[0] + 32,string(x) + ", " + string(y))
+draw_text(view_xview[0] + 16,view_yview[0] + view_hview[0] - 64,"FPS: " + string(fps))
+
 draw_self()
-draw_text(view_xview[0],view_yview[0] + 32,string(x) + ", " + string(y))
+if 0{
+draw_sprite(splayer,0,dx,dy)
+
+draw_sprite(sbombred,0,spawnX,spawnY)
+draw_sprite(sbomb,0,x,y)
+}
