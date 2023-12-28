@@ -56,7 +56,6 @@
 	|oinit
 	|odeathspawn
 	|odevblock
-	|odevblockinvisgrass
 	|omirhole
 	|omirnoescape
 	|oEmptyCreateHole
