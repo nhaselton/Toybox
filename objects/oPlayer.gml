@@ -16,7 +16,7 @@ preX = x// for moving
 preY = y
 
 moveTimer = 0
-moveSpeed = room_speed  / 8 // How long to go from 1 square to the next
+moveSpeed = room_speed  / 12 // How long to go from 1 square to the next
 
 dx = x
 dy = y
