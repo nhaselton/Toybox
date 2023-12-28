@@ -33,3 +33,17 @@ invert=0
 arg0=oundergroundtilemirror
 arg1=0
 */
+#define Collision_holepar
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=604
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=omirnospawn
+invert=0
+arg0=omirpawn
+arg1=0
+*/
