@@ -21,6 +21,9 @@ moveSpeed = room_speed  / 10 // How long to go from 1 square to the next
 dx = x
 dy = y
 dir = 1
+
+//debug
+candie = false
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -206,10 +209,12 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if candie{
 moveTimer = 0
 x = spawnX
 y = spawnY
 sfx_die()
+}
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
 lib_id=1
