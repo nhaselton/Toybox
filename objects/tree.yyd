@@ -46,8 +46,11 @@
 +handlers
 	|otitle
 	|omirpawn
+	|mirspawn2
 	|omirnospawn
+	|omirnospawn2
 	|ormirspawnpoint
+	|omirspawnpoint2
 	|oHoldable
 	|oPushable
 	|oinit
