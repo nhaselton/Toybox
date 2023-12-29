@@ -69,5 +69,5 @@
 +debug only
 	|odebug
 	|odebugon
-	|devblockvisible
+	|odevblockvisible
 	|onpc_test
