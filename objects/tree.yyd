@@ -38,7 +38,9 @@
 +interact
 	|oCrate
 	|ostairsdown
+	|ostairsdown2
 	|ostairsup
+	|ostairsup2
 	|oundergroundtile
 	|osign1
 	|osign1a
@@ -56,6 +58,7 @@
 	|oinit
 	|odeathspawn
 	|odevblock
+	|odevblock_noback
 	|omirhole
 	|omirnoescape
 	|oEmptyCreateHole
@@ -66,5 +69,4 @@
 +debug only
 	|odebug
 	|odebugon
-	|debug_player
 	|onpc_test

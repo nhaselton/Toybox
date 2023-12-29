@@ -42,7 +42,7 @@ oFullCrateHole
 
 
 
-debug_player
+
 
 odebugon
 ogamever
@@ -79,3 +79,13 @@ osecretwall
 oinvisgrass
 
 
+
+
+
+
+
+
+ostairsdown2
+
+odevblock_noback
+ostairsup2

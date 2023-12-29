@@ -9,6 +9,6 @@ sound_stop_all()
 lib_id=1
 action_id=224
 invert=0
-arg0=r_underground
+arg0=r_GrassWorld_p2
 arg1=0
 */
