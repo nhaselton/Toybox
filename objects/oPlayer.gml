@@ -268,20 +268,6 @@ arg1=0
 #define Draw_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=403
-relative=0
-applies_to=self
-invert=0
-arg0=odebugon
-arg1=32
-arg2=-96
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=422
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
 action_id=603
 applies_to=self
 */
@@ -292,37 +278,10 @@ else{
     draw_sprite_ext(sprite_index, image_index, x + 32, y, dir, image_yscale, 0, image_blend, image_alpha);
 }
 
-draw_text(view_xview[0] + 16,view_yview[0] + 32,string(x) + ", " + string(y))
-draw_text(view_xview[0] + 16,view_yview[0] + view_hview[0] - 64,"FPS: " + string(fps))
-
-if 0{
-draw_sprite(splayer,0,dx,dy)
-
-draw_sprite(sbombred,0,spawnX,spawnY)
-draw_sprite(sbomb,0,x,y)
-}
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=424
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=421
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=422
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=603
-applies_to=self
-*/
-if ( dir == 1){
-    draw_sprite_ext(sprite_index, image_index, x, y, dir, image_yscale, 0, image_blend, image_alpha);
-}
-else{
-    draw_sprite_ext(sprite_index, image_index, x + 32, y, dir, image_yscale, 0, image_blend, image_alpha);
+if instance_exists(odebugon)
+{
+    draw_text(view_xview[0] + 16,view_yview[0] + 32,string(x) + ", " + string(y))
+    draw_text(view_xview[0] + 16,view_yview[0] + view_hview[0] - 64,"FPS: " + string(fps))
 }
 
 if 0{
@@ -331,7 +290,3 @@ draw_sprite(splayer,0,dx,dy)
 draw_sprite(sbombred,0,spawnX,spawnY)
 draw_sprite(sbomb,0,x,y)
 }
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=424
-*/

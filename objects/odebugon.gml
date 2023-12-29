@@ -1,3 +1,12 @@
+#define Create_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=202
+applies_to=odevblock
+invert=0
+arg0=devblockvisible
+arg1=0
+*/
 #define KeyPress_16
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -108,4 +117,18 @@ action_id=224
 invert=0
 arg0=r_texttest
 arg1=0
+*/
+#define KeyPress_79
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=333
+invert=0
+arg0=debugsave
+*/
+#define KeyPress_80
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=334
+invert=0
+arg0=debugsave
 */
