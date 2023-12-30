@@ -279,7 +279,7 @@ else{
     draw_sprite_ext(sprite_index, image_index, x + 32, y, dir, image_yscale, 0, image_blend, image_alpha);
 }
 
-if instance_exists(odebugon)
+if instance_exists(odebugon) and 0
 {
     draw_text(view_xview[0] + 16,view_yview[0] + 32,string(x) + ", " + string(y))
     draw_text(view_xview[0] + 16,view_yview[0] + view_hview[0] - 64,"FPS: " + string(fps))
