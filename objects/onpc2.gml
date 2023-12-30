@@ -6,6 +6,15 @@ applies_to=self
 */
 shouldDraw = 0
 endWait = room_speed / 2
+
+timer = 999999999999999999999999
+#define Alarm_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+        room_goto_next()
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -24,6 +33,13 @@ if ( distance_to_object(oPlayer) < 64){
 
 
 shouldDraw -=1
+
+
+timer -=1
+
+if ( timer == 0){
+    room_goto_next()
+}
 #define Draw_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -36,12 +52,10 @@ draw_set_font(global.myFont);
 draw_set_color(c_white);
 
 if ( shouldDraw > 0){
-    sound_stop_all()
-    sfx_play("npc")
-    dialogue("end")
-
-    if endWait = 0 {
-        endWait = 6;
-        room_goto_next()
+    if ( timer > 1000){
+        timer = room_speed * 4
+        sound_stop_all()
+        sfx_play("npc")
     }
+    dialogue("end")
 }
