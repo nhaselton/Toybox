@@ -12,11 +12,12 @@ action_id=603
 applies_to=self
 */
 if ( distance_to_object(oPlayer) < 64){
-    shouldDraw = 2;//room_speed
-
-    if not sound_isplaying("sfxpack_42") {
-    sfx_play("npc")
+if not sound_isplaying("sfxpack_42")  and shouldDraw < 0{
+        sfx_play("npc")
     }
+        shouldDraw = 2;//room_speed
+
+
 }
 
 
