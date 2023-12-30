@@ -14,7 +14,7 @@ applies_to=self
 draw_set_font(global.myFont);
 draw_set_color(c_white);
 
-frame = ( creditTime ) / ( 2 * room_speed )
+frame = ( creditTime ) / ( 4 * room_speed )
 
 // Just a warning. the font needs to be in all caps or it won't display
 if ( frame == 0){
@@ -48,4 +48,4 @@ draw_text(160+32, 310+16, " BY TOM HALL ");
 }
 //Game will probably close itself at this point
 
-creditTime +=1
+    creditTime +=1
