@@ -13,3 +13,9 @@ if argument0 = "end"
     draw_text(view_xview[0] + 27+16, view_yview[0] + 35+16, " AND YOUR PRINCESS IS ");
     draw_text(view_xview[0] + 27+16, view_yview[0] + 60+16, " IN ANOTHER CASTLE ");
 }
+
+if argument0 == "rock"
+{
+    draw_text(view_xview[0] + -3+16, view_yview[0] + 10+16, " THE ROCK IS TOO HARD");
+
+}
