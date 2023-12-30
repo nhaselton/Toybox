@@ -45,10 +45,10 @@ else if ( frame <= 5){
 draw_text(220+32, 250+16, " MADE FOR ");
 draw_text(100+32, 280+16, " TOY BOX JAM 2023 ");
 draw_text(160+32, 310+16, " BY TOM HALL ");
+}else{
+    game_end()
 }
-else if ( frame <= 6){
-   game_end()
-}
+
 
 //Game will probably close itself at this point
 
