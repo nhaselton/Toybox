@@ -76,7 +76,7 @@ obridge
 
 omirspawnpoint2
 osecretwall
-oinvisgrass
+
 
 
 
@@ -91,3 +91,15 @@ odevblock_noback
 ostairsup2
 
 odevblockvisible
+
+ofinal
+finalmusic
+oinvisgrass
+
+
+
+onpc2
+
+ocredits
+
+

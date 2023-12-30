@@ -5,7 +5,7 @@ action_id=603
 applies_to=self
 */
 pushTimer = 0
-pushCooldown = room_speed / 4
+pushCooldown = room_speed / 2
 
 spawnX = x
 spawnY = y
@@ -22,14 +22,21 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-//if ( pushTimer <= 0){
+if ( pushTimer <= 0){
     if ( other.hsp != 0 && other.vsp == 0) {
         x += sign(other.hsp) * 32
-        sfx_push()
+
+        if not sound_isplaying("sfxpack_3") {
+        sfx_play("Push")
+        }
+
     }
     else if ( other.hsp == 0 && other.vsp != 0){
         y += sign(other.vsp) * 32
-        sfx_push()
+
+        if not sound_isplaying("sfxpack_3") {
+        sfx_play("Push")
+        }
     }
     //Can not push diagonally, Figure out which directino is clsoer and use that
     else{
@@ -41,7 +48,7 @@ applies_to=self
             y += sign(other.vsp) * 32
     }
     pushTimer = pushCooldown
-//}
+}
 #define Collision_oSolid
 /*"/*'/**//* YYD ACTION
 lib_id=1

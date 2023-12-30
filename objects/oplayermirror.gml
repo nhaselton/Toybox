@@ -85,7 +85,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-sfx_die()
+sfx_play("Die")
 o = instance_create(x,y,osign1)
 with o{
     event_perform(ev_collision,oPlayer)

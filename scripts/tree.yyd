@@ -1,19 +1,5 @@
 |initgame
 |scr_changeAnim
-+music scripts
-	|mus_dungeon
-	|mus_puzzle
-	|mus_underground
-+sfx scripts
-	|sfx_push
-	|sfx_blockdrop
-	|sfx_die
-	|sfx_bomb
-	|sfx_breakrock
-	|sfx_truthreveal
-	|sfx_step
-	|sfx_step2
-	|sfx_stairs
-	|sfx_dialogue
-	|sfx_title
-	|sfx_pickup
+|mus_play
+|sfx_play
+|dialogue

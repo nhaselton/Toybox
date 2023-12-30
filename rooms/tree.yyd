@@ -3,6 +3,7 @@
 |r_GrassWorld
 |r_underground
 |r_GrassWorld_p2
+|r_end
 +debug only
 	|r_testroom1
 	|PressurePlates

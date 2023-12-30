@@ -6,10 +6,10 @@
 	|ograss2
 	|ograss3
 	|ograss4
-	|oinvisgrass
 	|owall1
 	|obombablewall
 	|osecretwall
+	|oinvisgrass
 	|owall2
 	|orock
 	|oharderrock
@@ -25,6 +25,7 @@
 	|omirnospawn
 +musicplay
 	|dungeonmusic
+	|finalmusic
 	|undergroundmusic
 	|titlemusic
 +Parent objects
@@ -45,12 +46,14 @@
 	|osign1
 	|osign1a
 	|onpc
+	|onpc2
 +hazards
 	|oholeindi
 	|ohole
 	|oundergroundtilemirror
 +handlers
 	|otitle
+	|ocredits
 	|ormirspawnpoint
 	|omirspawnpoint2
 	|oHoldable
@@ -66,6 +69,7 @@
 	|oplayernoescape
 	|oplayernoescapeoff
 	|ocratespawn
+	|ofinal
 +debug only
 	|odebug
 	|odebugon

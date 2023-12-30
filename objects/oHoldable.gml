@@ -17,7 +17,17 @@ applies_to=self
 if held {
     x = player.x
     y = player.y
-    // sfx_pickup() <----- idk how to add this without breaking shit
+
+    if heldpickupsfx < 1 {
+        sfx_play("Pickup")
+    }
+
+    if sound_isplaying("sfxpack_14")
+    {
+        heldpickupsfx = 1;
+    }
+} else {
+     heldpickupsfx = 0;
 }
 
 pickupTimer -= 1

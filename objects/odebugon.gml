@@ -2,7 +2,13 @@
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=203
-applies_to=oSolid
+applies_to=owall1
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=owall2
 invert=0
 */
 /*"/*'/**//* YYD ACTION
@@ -78,7 +84,7 @@ sound_stop_all()
 lib_id=1
 action_id=224
 invert=0
-arg0=r_testroom1
+arg0=r_end
 arg1=0
 */
 #define KeyPress_53
@@ -92,10 +98,24 @@ sound_stop_all()
 lib_id=1
 action_id=224
 invert=0
-arg0=PressurePlates
+arg0=r_testroom1
 arg1=0
 */
 #define KeyPress_54
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+sound_stop_all()
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=224
+invert=0
+arg0=PressurePlates
+arg1=0
+*/
+#define KeyPress_55
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -117,6 +137,12 @@ invert=0
 arg0=debugsave
 */
 #define KeyPress_80
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+sound_stop_all()
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=334

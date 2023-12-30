@@ -160,6 +160,7 @@ if ( keyboard_check_pressed(vk_space))
             pickupTimer = pickupCooldown
         }
         holding = noone
+        holdsfxplay = 0;
     }
 }
 #define Collision_orock
@@ -208,7 +209,7 @@ if candie{
 moveTimer = 0
 x = spawnX
 y = spawnY
-sfx_die()
+sfx_play("Die")
 }
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
@@ -218,7 +219,7 @@ applies_to=self
 */
 x = spawnX
 y = spawnY
-sfx_die()
+sfx_play("Die")
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=203

@@ -11,7 +11,7 @@ with(other)
     instance_destroy()
 //Destroy Self
 instance_destroy()
-sfx_blockdrop()
+sfx_play("BlockDrop")
 
 // Handles the first puzzle's crates
 /*
