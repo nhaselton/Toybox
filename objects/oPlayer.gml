@@ -211,6 +211,12 @@ x = spawnX
 y = spawnY
 sfx_play("Die")
 }
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=oplayermirror
+invert=0
+*/
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
 lib_id=1
