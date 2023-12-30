@@ -132,4 +132,9 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-draw_self()
+if ( dir == 1){
+    draw_sprite_ext(sprite_index, image_index, x, y, dir, image_yscale, 0, image_blend, image_alpha);
+}
+else{
+    draw_sprite_ext(sprite_index, image_index, x + 32, y, dir, image_yscale, 0, image_blend, image_alpha);
+}
