@@ -79,6 +79,10 @@ if ( moveTimer <= 0){
         spawnY = y
     }
 }
+
+///Animate
+if image_index > anims[animIndex,1]
+    image_index = anims[animIndex,0]
 #define Collision_holepar
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -122,3 +126,10 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+draw_self()
