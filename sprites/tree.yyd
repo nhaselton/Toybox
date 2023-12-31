@@ -1,60 +1,35 @@
-|sToyBoxJam3
 |snpc
 |splayer
 |sfont
-|sprite4
 +Tools
-	|scrossbow
 	|spickaxe
-	|ssword
-	|shammer
-+Enemies
-	|suuuhhhh
-+Pickups
-	|sheart
-	|ssilverkey
-	|sarrow
-	|sgoldkey
-	|sring
-|sprite14
 +Walls and floors
 	|swall1
 	|swall2
 	|sgrass1
 	|sgrass2
+	|sinvisgrass
 	|sgrass3
 	|sgrass4
-	|stree
-	|sbush
-	|ssnow
-	|sdesert1
-	|sdesert2
-	|sice1
-	|sice2
 	|sundergroundtile
 	|sundergroundtilemirror
 +Interact
-	|sswitch_on
-	|sswitch_off
-	|schest
-	|scoin
 	|sstairsdown
 	|sstairsup
 	|spathblock
 	|spathunblock
-|sprite37
 |sdevblock
 |srock
 |sCrate
 |scratedrop
-|toyboxjam3b
 |sholeindi
 |shole
-|sprite46
 |sundeground
 |ssign
 |sbomb
 |sbombred
-|olensoftruth
+|slensoftruth
 |spressureplate
 |sharderrock
+|sbridge
+|smirspawn

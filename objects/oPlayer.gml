@@ -11,6 +11,19 @@ walkSpeed = 5
 holding = noone
 spawnX = x
 spawnY = y
+
+preX = x// for moving
+preY = y
+
+moveTimer = 0
+moveSpeed = room_speed  / 10 // How long to go from 1 square to the next
+
+dx = x
+dy = y
+dir = 1
+
+//debug
+candie = true
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -41,11 +54,6 @@ anims[2,2] = .1
 
 animIndex = 0
 scr_changeAnim(0)
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=603
-applies_to=self
-*/
 #define Step_0
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -67,69 +75,73 @@ DOWN = (keyboard_check(vk_down) or keyboard_check(ord('S')))
 LEFT = (keyboard_check(vk_left) or keyboard_check(ord('A')))
 RIGHT = (keyboard_check(vk_right) or keyboard_check(ord('D')))
 
-hsp = 0
-vsp = 0
-if ( UP ){
-    vsp = -walkSpeed
-}
-if ( DOWN ){
-    vsp = walkSpeed
-}
-if ( LEFT ) {
-    hsp = -walkSpeed
-}
-if ( RIGHT ){
-    hsp = walkSpeed
+if ( moveTimer < 0){
+    if ( RIGHT ) hsp = 1
+    else if ( LEFT ) hsp = -1
+    else if ( UP ) vsp = -1
+    else if ( DOWN) vsp =  1;
+    if ( LEFT or RIGHT or UP or DOWN){
+
+        hit = instance_place(x + hsp, y + vsp, oSolid);
+        if ( hit == noone){
+            moveTimer = moveSpeed
+            if ( animIndex != 1)
+                scr_changeAnim(1)
+            if hsp != 0{
+                dir = sign(hsp)
+            }
+
+        }else{
+            with hit
+                event_perform(ev_collision,oPlayer)
+        }
+     }
 }
 
-//Flip to face correct Side
-if hsp != 0
-    image_xscale = sign(hsp)
 
-//Update Animation (State machine?)
-if ( hsp != 0 or vsp != 0){
-    if ( animIndex != 1)
-        scr_changeAnim(1)
+
+if ( moveTimer > 0 ){
+    x += hsp * ((1/moveSpeed) * 32)
+    y += vsp * ((1/moveSpeed) * 32)
+
+
 }
-else{
+moveTimer -=1
+
+if (moveTimer <= 0){
+    //image_index = 0
+    hsp = 0
+    vsp = 0
+        //Fix floating point error
+    x = round ( x / 32 ) * 32
+    y = round ( y / 32 ) * 32
+}
+if ( moveTimer == -2){ //-1 so animation doesnt stop if holding down a key the entire time
     scr_changeAnim(0)
 }
-
-objHor = instance_place(x+hsp,y,oSolid)
-objVer = instance_place(x,y+vsp,oSolid)
-
-if ( objHor == noone){
-    x += hsp
-}
-if ( objVer == noone)
-    y += vsp
-
-with objHor
-    event_perform(ev_collision,oPlayer)
-with objVer
-    event_perform(ev_collision,oPlayer)
-
 //Swapping Rooms
 roomWidth = 800
 roomHeight = 608
 
-relx = x - view_xview[0]
-rely = y - view_yview[0]
+if ( moveTimer <= 0){
+    relx = x - view_xview[0]
+    rely = y - view_yview[0]
 
-if ( relx > roomWidth )
-    view_xview[0] += roomWidth
-if ( relx < 0 )
-    view_xview[0] -= roomWidth
+    if ( relx >= roomWidth )
+        view_xview[0] += roomWidth
+    if ( relx < 0 )
+        view_xview[0] -= roomWidth
 
-if ( rely > roomHeight)
-    view_yview[0] += roomHeight
-if ( rely < 0 )
-    view_yview[0] -= roomHeight
+    if ( rely >= roomHeight)
+        view_yview[0] += roomHeight
+    if ( rely < 0 )
+        view_yview[0] -= roomHeight
 
-//dont care is scuffed
-if ( relx > roomWidth or relx < 0 or rely > roomHeight or rely < 0){
-    spawnX = x
-    spawnY = y
+    //dont care is scuffed
+    if ( relx >= roomWidth or relx < 0 or rely > roomHeight or rely < 0){
+        spawnX = x
+        spawnY = y
+    }
 }
 /*"/*'/**//* YYD ACTION
 lib_id=1
@@ -148,6 +160,7 @@ if ( keyboard_check_pressed(vk_space))
             pickupTimer = pickupCooldown
         }
         holding = noone
+        holdsfxplay = 0;
     }
 }
 #define Collision_orock
@@ -192,30 +205,17 @@ lib_id=1
 action_id=603
 applies_to=self
 */
+if candie{
+moveTimer = 0
 x = spawnX
 y = spawnY
-sfx_die()
+sfx_play("Die")
+}
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=203
 applies_to=oplayermirror
 invert=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=202
-applies_to=omirnospawn
-invert=0
-arg0=omirpawn
-arg1=0
-*/
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=202
-applies_to=oplayernoescape
-invert=0
-arg0=oplayernoescapeoff
-arg1=0
 */
 #define Collision_oundergroundtilemirror
 /*"/*'/**//* YYD ACTION
@@ -225,7 +225,7 @@ applies_to=self
 */
 x = spawnX
 y = spawnY
-sfx_die()
+sfx_play("Die")
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=203
@@ -272,3 +272,28 @@ invert=0
 arg0=oplayernoescapeoff
 arg1=0
 */
+#define Draw_0
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=603
+applies_to=self
+*/
+if ( dir == 1){
+    draw_sprite_ext(sprite_index, image_index, x, y, dir, image_yscale, 0, image_blend, image_alpha);
+}
+else{
+    draw_sprite_ext(sprite_index, image_index, x + 32, y, dir, image_yscale, 0, image_blend, image_alpha);
+}
+
+if instance_exists(odebugon) and 0
+{
+    draw_text(view_xview[0] + 16,view_yview[0] + 32,string(x) + ", " + string(y))
+    draw_text(view_xview[0] + 16,view_yview[0] + view_hview[0] - 64,"FPS: " + string(fps))
+}
+
+if 0{
+draw_sprite(splayer,0,dx,dy)
+
+draw_sprite(sbombred,0,spawnX,spawnY)
+draw_sprite(sbomb,0,x,y)
+}

@@ -1,11 +1,21 @@
-#define KeyPress_17
+#define KeyPress_16
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=202
-applies_to=oPlayer
+action_id=203
+applies_to=owall1
 invert=0
-arg0=debug_player
-arg1=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=owall2
+invert=0
+*/
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=203
+applies_to=holepar
+invert=0
 */
 #define KeyPress_48
 /*"/*'/**//* YYD ACTION
@@ -60,7 +70,7 @@ sound_stop_all()
 lib_id=1
 action_id=224
 invert=0
-arg0=r_testroom1
+arg0=r_GrassWorld_p2
 arg1=0
 */
 #define KeyPress_52
@@ -74,10 +84,17 @@ sound_stop_all()
 lib_id=1
 action_id=224
 invert=0
-arg0=PressurePlates
+arg0=r_end
 arg1=0
 */
-#define KeyPress_53
+#define KeyPress_79
+/*"/*'/**//* YYD ACTION
+lib_id=1
+action_id=333
+invert=0
+arg0=debugsave
+*/
+#define KeyPress_80
 /*"/*'/**//* YYD ACTION
 lib_id=1
 action_id=603
@@ -86,17 +103,7 @@ applies_to=self
 sound_stop_all()
 /*"/*'/**//* YYD ACTION
 lib_id=1
-action_id=224
+action_id=334
 invert=0
-arg0=r_texttest
-arg1=0
-*/
-#define KeyRelease_17
-/*"/*'/**//* YYD ACTION
-lib_id=1
-action_id=202
-applies_to=debug_player
-invert=0
-arg0=oPlayer
-arg1=0
+arg0=debugsave
 */

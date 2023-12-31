@@ -23,7 +23,7 @@ lib_id=1
 action_id=603
 applies_to=self
 */
-draw_sprite(snpc,0,x,y)
+draw_self()
 
 draw_set_font(global.myFont);
 draw_set_color(c_white);

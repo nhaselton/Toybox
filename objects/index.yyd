@@ -42,7 +42,7 @@ oFullCrateHole
 
 
 
-debug_player
+
 
 odebugon
 ogamever
@@ -71,3 +71,35 @@ obombonly
 obombablewall
 onpc
 onpc_test
+obridge
+
+
+omirspawnpoint2
+osecretwall
+
+
+
+
+
+
+
+
+
+ostairsdown2
+
+odevblock_noback
+ostairsup2
+
+odevblockvisible
+
+ofinal
+finalmusic
+oinvisgrass
+
+
+
+onpc2
+
+ocredits
+
+

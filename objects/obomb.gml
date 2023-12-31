@@ -29,7 +29,7 @@ event_inherited()
 if ( armed and armedTimer <= 0){
     armedTimer = 0;
     armed = false;
-    sfx_bomb()
+    sfx_play("Bomb")
 
     numToDestroy = 0
     toDestroy[0] = noone

@@ -8,6 +8,8 @@
 	|ograss4
 	|owall1
 	|obombablewall
+	|osecretwall
+	|oinvisgrass
 	|owall2
 	|orock
 	|oharderrock
@@ -18,8 +20,12 @@
 	|opathunblock
 	|oFullCrateHole
 	|oInvisWall
+	|obridge
+	|omirpawn
+	|omirnospawn
 +musicplay
 	|dungeonmusic
+	|finalmusic
 	|undergroundmusic
 	|titlemusic
 +Parent objects
@@ -33,25 +39,29 @@
 +interact
 	|oCrate
 	|ostairsdown
+	|ostairsdown2
 	|ostairsup
+	|ostairsup2
 	|oundergroundtile
 	|osign1
 	|osign1a
 	|onpc
+	|onpc2
 +hazards
 	|oholeindi
 	|ohole
 	|oundergroundtilemirror
 +handlers
 	|otitle
-	|omirpawn
-	|omirnospawn
+	|ocredits
 	|ormirspawnpoint
+	|omirspawnpoint2
 	|oHoldable
 	|oPushable
 	|oinit
 	|odeathspawn
 	|odevblock
+	|odevblock_noback
 	|omirhole
 	|omirnoescape
 	|oEmptyCreateHole
@@ -59,8 +69,9 @@
 	|oplayernoescape
 	|oplayernoescapeoff
 	|ocratespawn
+	|ofinal
 +debug only
 	|odebug
 	|odebugon
-	|debug_player
+	|odevblockvisible
 	|onpc_test

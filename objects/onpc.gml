@@ -12,7 +12,12 @@ action_id=603
 applies_to=self
 */
 if ( distance_to_object(oPlayer) < 64){
-    shouldDraw = 2;//room_speed
+if not sound_isplaying("sfxpack_42")  and shouldDraw < 0{
+        sfx_play("npc")
+    }
+        shouldDraw = 2;//room_speed
+
+
 }
 
 
@@ -29,8 +34,5 @@ draw_set_font(global.myFont);
 draw_set_color(c_white);
 
 if ( shouldDraw > 0){
-// Just a warning. the font needs to be in all caps or it won't display
-    draw_text(view_xview[0] + -3+16, view_yview[0] + 10+16, " DISTRUST THE EMPTY VOID ");
-    draw_text(view_xview[0] + 27+16, view_yview[0] + 35+16, " MAY NATURE GUIDE THY ");
-    draw_text(view_xview[0] + 267+16, view_yview[0] + 60+16, " PATH ");
+    dialogue("npc")
 }
