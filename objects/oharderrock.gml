@@ -21,10 +21,13 @@ action_id=603
 applies_to=self
 */
 draw_self()
+player = instance_find(oPlayer,0);
 
-if ( canDraw){
-    draw_set_font(global.myFont);
-    draw_set_color(c_white);
-    dialogue("rock");
+if ( canDraw and player.holding != noone){
+    if ( player.holding.object_index == oPickaxe){
+        draw_set_font(global.myFont);
+        draw_set_color(c_white);
+        dialogue("rock");
+    }
 }
 canDraw -=1
