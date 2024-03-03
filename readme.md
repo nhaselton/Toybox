@@ -5,6 +5,7 @@ A game with heavy inspirations from The Legend Of Zelda and Adventure (Atari 260
 Made in GameMaker 8.2 (A community mod of GameMaker 8.1)
 
 Programmed by: Nhaselton & Pikakid98
+\
 Level Design by: Pikakid98
 
 
