@@ -4,10 +4,6 @@ A game with heavy inspirations from The Legend Of Zelda and Adventure (Atari 260
 
 Made in GameMaker 8.2 (A community mod of GameMaker 8.1)
 
-Programmed by: Nhaselton & Pikakid98
+Programmed by: Nhaselton & [Pikakid98](https://pikakid98.github.io)
 \
-Level Design by: Pikakid98
-
-
-#### Note from Pikakid98
-I'm so sorry for the weird invisible block puzzle. It's a good puzzle in concept.. But in execution in OUR game.. no.. it's just.. ugh... Screenshots recommended (Faststone Capture is good)
+Level Design by: [Pikakid98](https://pikakid98.github.io)
