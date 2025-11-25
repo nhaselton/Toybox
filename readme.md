@@ -1,3 +1,5 @@
+### A more up-to-date version can be found [HERE](https://github.com/pikakid98-games/adventure-guy)
+
 # Adventure Guy
 
 A game with heavy inspirations from The Legend Of Zelda and Adventure (Atari 2600) made for Tom Hall's Toy Box Jam 2023
